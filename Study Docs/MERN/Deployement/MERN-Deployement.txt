@@ -1,0 +1,41 @@
+1.cd server
+2.Create Heroku Account
+3.Create New App
+4.Install dotenv npm install dotenv
+   * Change Listen Port to    
+ app.listen(process.env.PORT || port, () => {
+    console.log(`Example app listening at http://localhost:${port}`);
+  });
+
+  
+5. Check Package.json
+  "scripts": {
+    "start":"node index.js"
+   },
+6.  Enter Commands                        
+   *Install Heroku CLI                      
+     npm install Heroku
+   Heroku Login
+   git init
+   heroku git/remote -a <Your App>
+   git add .
+   git commit -am "First Commit"
+   git push heroku master
+
+SERVER SIDE DONE!!!! !DEPLOYED
+
+CLIENT SIDE:-
+Change the API Request Url 
+to Heroku server side url
+Upload on Git Hub
+Upload on Vercel
+Add Environment Variable
+if npm run start error
+ key=CI value=False
+
+CLIENT SIDE DONE!!!!!!!!DEPLOYED
+
+
+
+
+

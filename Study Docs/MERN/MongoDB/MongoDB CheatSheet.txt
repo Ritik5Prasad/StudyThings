@@ -1,0 +1,125 @@
+                                          DATABASE COMMAND 
+-View all DataBase
+show dbs
+
+-create a new or switch databases
+use dbName
+
+View current DataBase
+db
+
+Delete DataBase
+db.dropDatabase()
+                                            COLLECTION COMMANDS
+
+show collections
+db.createCollection('comments')
+db.content(collectionName).drop();
+                                             ROWS COMMANDS
+-Insert Rows 
+db.comments.insert({
+               'name':'Ritik',
+                'lang':'JavaScript' 
+          })  
+-Insert Many Rows
+db.comments.insert([
+          {
+    'name':'Riti',
+                'lang':'JavaScript' 
+},
+{
+    'name':'Ritik',
+                'lang':'JavaScript' 
+} 
+])
+
+
+View all Rows in Collection
+
+db.comments.find();
+db.comments.find().pretty()           //for Prettifed 
+
+
+Search in a MongoDb DataBase
+
+db.comments.find({lang:'Python'})
+
+Limit number
+db.comments.find().pretty().limit(3)
+
+Count Rows
+db.comments.fint().count();
+
+Sort Rows
+ascending
+db.comments.find().sort({name:1}).pretty
+descending
+db.comments.find().sort({name:-1}).pretty
+
+FindOne row
+db.comments.findOne({name:'Ritik'})
+
+Update Row
+db.comments.update({name:'Harry},
+{
+       'name':'Harry'
+       'lang':'Pyhton'     
+
+
+}
+)
+
+If doesn't exist in collection so insert
+
+db.comments.update({name:'Harry},
+{
+       'name':'Harry'
+       'lang':'Pyhton'     
+
+
+},{upsert:true}
+)
+
+Increment Operators
+
+db.comments.update({name:'Harry},
+{
+  {$inc:{
+memeber_since:2}}         
+},
+)
+
+MongoDB Atlas - Cloud Connection String 
+MongoDB Compass-  Connection String to Collect on Your Application Gui To control DataBase
+Mongo - type cmd Mongo It is Shell Command Line To Type Commands
+Mongod - It is a environment to Run Mongo (basically Compiler)  C/ProgramFiles/Mongo/src/bin copy to Environment path
+
+Mongo DB Connection to React
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
